@@ -34,7 +34,7 @@
 
             if (sourceSql !== '') {
                 errorP.text('');
-                sql = vkbeautify.sql(sourceSql, spacesSelect); // pretty print SQL
+                sql = vkbeautify.sql(sourceSql); // pretty print SQL
                 sqlArea.val(sql);
                 $('#copy').removeClass('d-none');
             } else {
@@ -90,11 +90,12 @@
                         <p class="align-middle">Визуализация отступа: </p>
                     </div>
                     <div class="col-4">
-                        <select name="spaces" id="spaces" class="form-control" >
-                            <option value="-">-</option>
-                            <option value="--">--</option>
-                            <option value="---">---</option>
+                        <select name="spaces" id="spaces" class="form-control" disabled>
                             <option value="----">----</option>
+                            <option value="---">---</option>
+                            <option value="--">--</option>
+                            <option value="-">-</option>
+
                         </select>
                     </div>
                     <div class="col-2">
