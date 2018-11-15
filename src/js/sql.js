@@ -1,0 +1,2 @@
+const errorMessage = 'Пустой запрос';
+
