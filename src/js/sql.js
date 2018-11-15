@@ -1,2 +1,1 @@
-const errorMessage = 'Пустой запрос';
 
