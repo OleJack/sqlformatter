@@ -1,11 +1,11 @@
 import vkbeautify from 'vkbeautify';
 import $ from './js/jquery-3.3.1.min';
+
 import './css/bootstrap.min.css';
 import './css/sql.css';
 
 const errorMessage = 'Пустой запрос';
 
-console.log('Loaded');
 $(document).ready(function () {
     $('#main').removeClass('d-none');
 });
@@ -24,9 +24,10 @@ window.formatSql = function () {
     let errorP = $('#error');
     let spacesSelect = $("#spaces").find("option:selected").text();
     let sourceSql = sqlArea.val();
+
     if (sourceSql.trim() === '') {
         errorP.text(errorMessage);
-        $('#copy').addClass('d-none');
+        $('#copy').addClass('d-none'); // show errorMessage
     } else {
         errorP.text('');
         let sql = vkbeautify.sql(sourceSql); // pretty print SQL
