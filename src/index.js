@@ -3,10 +3,7 @@ import $ from './js/jquery-3.3.1.min';
 import './css/bootstrap.min.css';
 import './css/sql.css';
 
-
-
 const errorMessage = 'Пустой запрос';
-
 
 console.log('Loaded');
 $(document).ready(function () {
@@ -17,10 +14,10 @@ $('#format').click(function () {
     setTimeout(formatSql, 200);
 });
 
-export function copyFormattedSql() {
+window.copyFormattedSql = function () {
     $("#sql").select();
     document.execCommand('copy');
-}
+};
 
 window.formatSql = function () {
     let sqlArea = $('#sql');
